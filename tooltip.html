@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="ch">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ToolTip</title>
+    <style>
+        body {
+            font-size: 18px;
+            line-height: 1.8;
+            font-family: "Microsoft YaHei", "微软雅黑";
+        }
+
+        #demo {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px 30px;
+            position: relative;
+            background-color: #fff;
+        }
+
+        #demo h2 {
+            color: #03F;
+        }
+
+        #demo .tooltip {
+            color: #03F;
+            cursor: help;
+        }
+
+        .tooltipbox {
+            display: block;
+            border: 1px solid #03F;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            padding: 5px 15px;
+            background-color: #fff;
+            box-shadow:2px 2px 3px 2px rgba(70,117,245, 0.4);
+            -moz-box-shadow:2px 2px 3px 2px rgba(70,117,245, 0.4);
+            -webkit-box-shadow:2px 2px 3px 2px rgba(70,117,245, 0.4);
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="demo">
+    <p><a class="tooltip" id="tooltip1">慕课网</a>的使命是传播互联网最前沿技术，帮助更多的人实现梦想！在慕课网前端开发、
+        <a class="tooltip" id="tooltip2">Android</a>开发、<a class="tooltip" id="tooltip3">iOS</a>开发等课程统统有，你还在等什么，赶紧来学习吧。
+    </p>
+</div>
+<script>
+    var className = "tooltipbox";
+    var demo = $('demo');
+    var isIE = navigator.userAgent.indexOf("MSIE") > -1;
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    function addEvent(element, event, callbackFunction) {
+        if (element.addEventListener) {
+            element.addEventListener(event, callbackFunction, false);
+        } else if (element.attachEvent) {
+            element.attachEvent("on" + event, callbackFunction);
+        }
+    }
+
+    function showToolTip(obj, id, html, width, height) {
+        if ($(id) == null) {
+            var tooltipBox = document.createElement("div");
+            tooltipBox.id = id;
+            tooltipBox.className = className;
+            tooltipBox.innerHTML = html;
+            tooltipBox.style.width = width ? width + "px" : "auto";
+            tooltipBox.style.height = height ? height + "px" : "auto";
+            tooltipBox.style.position = "absolute";
+            tooltipBox.style.display = "block";
+
+            var left = obj.offsetLeft;
+            var top = obj.offsetTop + 25;
+            if(!width && isIE){
+                toolTipBox.style.width = toolTipBox.offsetWidth;
+            }
+            //left，不让ToolTip提示框超出浏览器
+            if(left + tooltipBox.offsetWidth > document.body.clientWidth){
+                var demoLeft = demo.offsetLeft;
+                left = document.body.clientWidth - tooltipBox.offsetWidth - demoLeft;
+                if (left < 0) left = 0;
+            }
+
+            tooltipBox.style.left = left + "px";
+            tooltipBox.style.top = top + "px";
+            obj.appendChild(tooltipBox);
+
+            addEvent(obj, "mouseleave", function () {
+                tooltipBox.style.display = "none";
+            });
+        } else {
+            $(id).style.display = "block";
+        }
+    }
+    addEvent(demo, "mouseover", function (e) {
+        var event = e || window.event;
+        var target = event.target || event.srcElement;
+        if (target.className == "tooltip") {
+            var _html;
+            var _id;
+//            var _width = 100;
+            switch (target.id) {
+                case "tooltip1":
+                    _id = "t1";
+                    _html = "慕课网tip";
+                    break;
+                case "tooltip2":
+                    _id = "t2";
+                    _html = "Android tip";
+                    break;
+                case "tooltip3":
+                    _id = "t3";
+                    _html = "IOS tip";
+                    break;
+                default :
+                    return false;
+            }
+            showToolTip(target, _id, _html);
+        }
+    })
+
+</script>
+</body>
+</html>

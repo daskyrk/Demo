@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ToolTip</title>
+    <style>
+        body {
+            font-size: 18px;
+            line-height: 1.8;
+            font-family: "Microsoft YaHei", "微软雅黑";
+        }
+
+        #demo {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px 30px;
+            position: relative;
+            background-color: #fff;
+        }
+
+        #demo h2 {
+            color: #03F;
+        }
+
+        #demo .tooltip {
+            color: #03F;
+            cursor: help;
+        }
+
+        .tooltipbox {
+            display: block;
+            border: 1px solid #66CCFF;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            padding: 5px 15px;
+            background-color: #fff;
+        }
+
+    </style>
+    <script>
+        var tooltips = document.getElementsByClassName("tooltip");
+        window.onload = function () {
+//            for(var i=0;i<tooltips.length;i++){
+//                alert(tooltips[i].id);
+            tooltips[0].addEventListener("mouseenter", function () {
+                checkTipExist(tooltips[0].id);
+            })
+            tooltips[1].addEventListener("mouseenter", function () {
+                checkTipExist(tooltips[1].id);
+            })
+            tooltips[2].addEventListener("mouseenter", function () {
+                checkTipExist(tooltips[2].id);
+            })
+//            }
+
+            function $(id) {
+                return document.getElementById(id);
+            }
+
+            function checkTipExist(id) {
+//            switch (id){
+//                case "tooltip1":break;
+//                case "tooltip2":break;
+//                case "tooltip3":break;
+//            }
+
+                if (document.getElementById(id + "box")) {
+                    alert("y");
+                    id = id + "box";
+                    document.getElementById(id).style.display = "block";
+                } else {
+                    var tipbox = document.createElement("div");
+
+                    tipbox.className = "tooltipbox";
+                    tipbox.innerHTML = "asdfasdfasd";
+                    tipbox.id = id + "box";
+                    tipbox.style.position = "absolute"
+                    tooltips[0].appendChild(tipbox);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div id="demo">
+    <p><a class="tooltip" id="tooltip1">慕课网</a>的使命是传播互联网最前沿技术，帮助更多的人实现梦想！在慕课网前端开发、
+        <a class="tooltip" id="tooltip2">Android</a>开发、<a class="tooltip" id="tooltip3">iOS</a>开发等课程统统有，你还在等什么，赶紧来学习吧。
+    </p>
+</div>
+</body>
+</html>

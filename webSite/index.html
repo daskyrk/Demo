@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慕课网Demo</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="js/mf-pattern/mF_fancy.css"/>
+    <script type="text/javascript" src="js/setHomeSetFav.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/myfocus-2.0.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/mf-pattern/mF_fancy.js" charset="utf-8"></script>
+    <script>
+        myFocus.set({
+            id: "picBox"
+        })
+    </script>
+</head>
+<body>
+<div class="top">
+    <div class="top_content">
+        <ul>
+            <li><a href="#" onclick="SetHome(window.location)">设为首页</a></li>
+            <li><a href="#" onclick="AddFavorite(window.location,document.title)">加入收藏</a></li>
+            <li><a href="">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+<div class="wrap">
+    <div class="logo">
+        <div class="logo_left">
+            <img src="img/logo.jpg" alt="慕课网"/>
+        </div>
+        <div class="logo_right">
+            <img src="img/tel.jpg" alt="热线电话"/>24小时服务热线：<span class="tel">123-456-7890</span>
+        </div>
+    </div>
+    <!--logo结束-->
+    <div class="nav">
+        <div class="nav_left"></div>
+        <div class="nav_mid">
+            <div class="nav_mid_left">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="list.html">关于慕课</a></li>
+                    <li><a href="list.html">新闻动态</a></li>
+                    <li><a href="list.html">课程中心</a></li>
+                    <li><a href="list.html">在线课程</a></li>
+                    <li><a href="list.html">人才招聘</a></li>
+                </ul>
+            </div>
+            <div class="nav_mid_right">
+                <form action="" method="post">
+                    <input type="text" class="search_text"/>
+                </form>
+            </div>
+        </div>
+        <div class="nav_right"></div>
+    </div>
+    <!--nav结束-->
+    <div class="ad" id="picBox">
+        <div class="loading"><img src="img/loading.gif" alt="图片加载中..."></div>
+        <div class="pic">
+            <ul>
+                <li><img src="img/ad2.jpg" alt=""/></li>
+                <li><img src="img/ad3.jpg" alt=""/></li>
+                <li><img src="img/ad4.jpg" alt=""/></li>
+            </ul>
+        </div>
+    </div>
+    <!--ad结束-->
+    <div class="main">
+        <div class="news">
+            <div class="title">
+                <h2 class="title_left">新闻中心</h2><span class="title_right"><a href="">More&gt;&gt;</a></span>
+            </div>
+            <!--title结束-->
+            <div class="pic_news">
+                <img src="img/news.jpg" alt=""/>
+
+                <h2><a href="">520 哈哈哈哈哈哈哈哈哈和</a></h2>
+
+                <p>活动时间：123312423<br/>获奖公布时间：前额23213423<br/><a href="">learn more&gt;&gt;</a>
+                </p>
+            </div>
+            <!--pic_news结束-->
+            <div class="news_list">
+                <ul>
+                    <li><a href="">获奖公布时间d</a><span>2014-06-01</span></li>
+                    <li><a href="">获奖公布时间vz</a><span>2014-06-01</span></li>
+                    <li><a href="">获奖公布时间c</a><span>2014-06-01</span></li>
+                    <li><a href="">获奖公布时间</a><span>2014-06-01</span></li>
+                </ul>
+            </div>
+            <!--news_list结束-->
+        </div>
+        <!--news结束-->
+        <div class="course">
+            <div class="title"><h2 class="title_left">
+                课程中心
+            </h2><span class="title_right"><a href="#">More&gt;&gt;</a></span></div>
+            <div class="course_pic">
+                <img src="img/css.jpg" alt=""/>
+
+                <h2><a href="">CSS2圆角进化论</a></h2>
+
+                <p>三快递费了卡萨剪短发垃圾撒了的空间发了谁看得见发了三快递费了卡萨剪短发垃圾撒了的空间发了谁看得见发了三快递费了卡萨剪短发垃圾撒了的空间发了谁看得见发了</p>
+            </div>
+            <div class="course_type">
+                <ul>
+                    <li>PHP开发</li>
+                    <li>软件开发</li>
+                    <li>JAVA开发</li>
+                    <li>Android开发</li>
+                </ul>
+            </div>
+        </div>
+        <!--course结束-->
+        <div class="sidebar">
+            <div class="video">
+                <div class="title"><h2 class="title_left">媒体聚焦</h2></div>
+                <div class="video_content">
+                    <embed src="http://player.youku.com/player.php/sid/XODIwODIzODg0/v.swf" allowFullScreen="true"
+                           quality="high" width="220" height="140" align="middle" allowScriptAccess="always"
+                           type="application/x-shockwave-flash"></embed>
+                </div>
+            </div>
+            <div>
+                <img src="img/app.jpg" alt=""/>
+            </div>
+        </div>
+        <!--sidebar结束-->
+    </div>
+</div>
+<!--wrap结束-->
+<div class="copyright">
+    <div class="copyright_content">
+        <ul>
+            <li><a href="">关于</a>
+                <ul>
+                    <li><a href="">品牌故事</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">加入我们</a></li>
+                    <li><a href="">版权申明</a></li>
+                </ul>
+            </li>
+            <li><a href="">课程</a>
+                <ul>
+                    <li><a href="">品牌故事</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">加入我们</a></li>
+                    <li><a href="">版权申明</a></li>
+                </ul>
+            </li>
+            <li><a href="">留言</a>
+                <ul>
+                    <li><a href="">品牌故事</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">加入我们</a></li>
+                    <li><a href="">版权申明</a></li>
+                </ul>
+            </li>
+            <li><a href="">关注</a>
+                <ul>
+                    <li><a href="">品牌故事</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">加入我们</a></li>
+                    <li><a href="">版权申明</a></li>
+                </ul>
+            </li>
+            <li><a href=""><img src="img/weixin.png" alt=""/>微信关注</a>
+                <ul>
+                    <li><img src="img/qrcode.jpg" alt=""/></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

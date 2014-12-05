@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css3照片墙</title>
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            height: 50%;
+            padding: 10px 10px 15px;
+            background-color: #FFF;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            position: absolute;
+            transition: 1s;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            z-index: 1;
+        }
+        img:hover{
+            height: 80%;
+            left:30%;
+            top:20px;
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            box-shadow: 10px 10px 15px #f88;
+            z-index: 2;
+        }
+
+        .pic1{
+            top: 0px;
+            left: 70px;
+            transform: rotate(10deg);
+            -webkit-transform: rotate(10deg);
+            -moz-transform: rotate(10deg);
+        }
+        .pic2{
+            top: 280px;
+            left: 0px;
+            transform: rotate(4deg);
+            -webkit-transform: rotate(4deg);
+            -moz-transform: rotate(4deg);
+        }
+        .pic3{
+            top: 0px;
+            left: 420px;
+            transform: rotate(13deg);
+            -webkit-transform: rotate(13deg);
+            -moz-transform: rotate(13deg);
+        }
+        .pic4{
+            top: 280px;
+            left: 370px;
+            transform: rotate(-12deg);
+            -webkit-transform: rotate(-12deg);
+            -moz-transform: rotate(-12deg);
+        }
+        .pic5{
+            top: 0px;
+            left: 1080px;
+            transform: rotate(5deg);
+            -webkit-transform: rotate(5deg);
+            -moz-transform: rotate(5deg);
+        }
+        .pic6{
+            top: 0px;
+            left: 670px;
+            transform: rotate(-8deg);
+            -webkit-transform: rotate(-8deg);
+            -moz-transform: rotate(-8deg);
+        }
+        .pic7{
+            top: 0px;
+            left: 250px;
+            transform: rotate(-6deg);
+            -webkit-transform: rotate(-6deg);
+            -moz-transform: rotate(-6deg);
+        }
+        .pic8{
+            top: 280px;
+            left: 580px;
+            transform: rotate(7deg);
+            -webkit-transform: rotate(7deg);
+            -moz-transform: rotate(7deg);
+        }
+        .pic9{
+            top: 290px;
+            left: 910px;
+            transform: rotate(-7deg);
+            -webkit-transform: rotate(-7deg);
+            -moz-transform: rotate(-7deg);
+        }
+
+        .container {
+            wclassth: 100%;
+            height: 450px;
+            margin: 0px auto;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Erika Toda, love u!</h1>
+
+<div class="container">
+    <img class="pic1" src="img/Erika Toda.jpg" alt=""/>
+    <img class="pic2" src="img/Erika Toda0.jpg" alt=""/>
+    <img class="pic3" src="img/Erika Toda8.jpg" alt=""/>
+    <img class="pic4" src="img/Erika Toda9.jpg" alt=""/>
+    <img class="pic5" src="img/Erika Toda10.jpg" alt=""/>
+    <img class="pic6" src="img/Erika Toda30.jpg" alt=""/>
+    <img class="pic7" src="img/Erika Toda3.jpg" alt=""/>
+    <img class="pic8" src="img/Erika Toda33.jpg" alt=""/>
+    <img class="pic9" src="img/Erika Toda24.jpg" alt=""/>
+</div>
+</body>
+</html>
