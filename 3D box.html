@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 5em;
+            text-align: center;
+            color: #414142;
+            background: rgb(246, 241, 232);
+            background-image: -webkit-radial-gradient(farthest-side ellipse at center, rgba(246, 241, 232, .85) 39%, rgba(212, 204, 186, .5) 100%),
+            url("http://fs0.139js.com/file/s_jpg_857b081bjw1du3kveu19sj.jpg");
+            background-image: -moz-radial-gradient(farthest-side ellipse at center, rgba(246, 241, 232, .85) 39%, rgba(212, 204, 186, .5) 100%),
+            url("http://fs0.139js.com/file/s_jpg_857b081bjw1du3kveu19sj.jpg");
+            background-image: -ms-radial-gradient(farthest-side ellipse at center, rgba(246, 241, 232, .85) 39%, rgba(212, 204, 186, .5) 100%),
+            url("http://fs0.139js.com/file/s_jpg_857b081bjw1du3kveu19sj.jpg");
+            background-image: -o-radial-gradient(farthest-side ellipse at center, rgba(246, 241, 232, .85) 39%, rgba(212, 204, 186, .5) 100%),
+            url("http://fs0.139js.com/file/s_jpg_857b081bjw1du3kveu19sj.jpg");
+            background-image: radial-gradient(farthest-side ellipse at center, rgba(246, 241, 232, .85) 39%, rgba(212, 204, 186, .5) 100%),
+            url("http://fs0.139js.com/file/s_jpg_857b081bjw1du3kveu19sj.jpg");
+            background-size: cover;
+        }
+
+        h1, em, {
+            display: block;
+            font-size: 25px;
+            font-weight: normal;
+            margin: 2em auto;
+        }
+
+        .button {
+            font-size: 20px;
+            color: white;
+            background: #000099 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAJklEQVQIW2P4//+/NxMDA8N/JgYGhn+oLDQu7Vk/GP4zMXDQx3IA0To1YWcEwtQAAAAASUVORK5CYII=") repeat-x;
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            box-shadow: 2px 3px 3px rgba(0,0,0,0.5);
+            -moz-box-shadow: 2px 3px 3px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 2px 3px 3px rgba(0,0,0,0.5);
+            margin: 3px 10px;
+        }
+
+        #container {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .wrapper {
+            display: block;
+            width: 300px;
+            height: 300px;
+            vertical-align: top;
+            margin: 45px auto;
+            cursor: pointer;
+            position: relative;
+            font-family: Tahoma, Arial;
+            -webkit-perspective: 4000px;
+            -moz-perspective: 4000px;
+            -ms-perspective: 4000px;
+            -o-perspective: 4000px;
+            perspective: 4000px;
+        }
+
+        .item {
+            width: 300px;
+            height: 300px;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            margin: 40px;
+            -webkit-transition: -webkit-transform .6s;
+            -moz-transition: -moz-transform .6s;
+            -ms-transition: -ms-transform .6s;
+            -o-transition: -o-transform .6s;
+            transition: transform .6s;
+        }
+
+        .item img {
+            display: block;
+            position: absolute;
+            border-radius: 5px;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+            -webkit-transition: all .6s;
+            -moz-transition: all .6s;
+            -ms-transition: all .6s;
+            -o-transition: all .6s;
+            transition: all .6s;
+            width: 300px;
+            height: 300px;
+        }
+
+        .item .front {
+            -webkit-transform: translateZ(150px);
+            -moz-transform: translateZ(150px);
+            -ms-transform: translateZ(150px);
+            -o-transform: translateZ(150px);
+            transform: translateZ(150px);
+        }
+
+        .item .behind {
+            -webkit-transform: translateZ(-150px);
+            -moz-transform: translateZ(-150px);
+            -ms-transform: translateZ(-150px);
+            -o-transform: translateZ(-150px);
+            transform: translateZ(-150px);
+        }
+
+        .item .top {
+            -webkit-transform: rotateX(90deg) translateZ(-150px);
+            -moz-transform: rotateX(90deg) translateZ(-150px);
+            -ms-transform: rotateX(90deg) translateZ(-150px);
+            -o-transform: rotateX(90deg) translateZ(-150px);
+            transform: rotateX(90deg) translateZ(-150px);
+        }
+
+        .item .bottom {
+            -webkit-transform: rotateX(90deg) translateZ(150px);
+            -moz-transform: rotateX(90deg) translateZ(150px);
+            -ms-transform: rotateX(90deg) translateZ(150px);
+            -o-transform: rotateX(90deg) translateZ(150px);
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .item .left {
+            -webkit-transform: rotateY(90deg) translateZ(-150px);
+            -moz-transform: rotateY(90deg) translateZ(-150px);
+            -ms-transform: rotateY(90deg) translateZ(-150px);
+            -o-transform: rotateY(90deg) translateZ(-150px);
+            transform: rotateY(90deg) translateZ(-150px);
+        }
+
+        .item .right {
+            -webkit-transform: rotateY(90deg) translateZ(150px);
+            -moz-transform: rotateY(90deg) translateZ(150px);
+            -ms-transform: rotateY(90deg) translateZ(150px);
+            -o-transform: rotateY(90deg) translateZ(150px);
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <h1>CSS3 3D BOX</h1>
+
+    <div class="wrapper">
+        <div id="item" class="item">
+            <img id="front" class="front" src="http://iphone.images.paojiao.cn/iphone/paper/20117/24/20719114/paojiao_b67bea51.jpg"/>
+            <img id="behind" class="behind" src="http://image.tianjimedia.com/uploadImages/2011/245/VCA6UB07091M.jpg"/>
+            <img id="top" class="top" src="http://iphone.images.paojiao.cn/iphone/paper/20117/23/86038959/paojiao_dbc005fa.jpg"/>
+            <img id="bottom" class="bottom" src="http://image.tianjimedia.com/uploadImages/2011/245/64K1J01O7410.jpg"/>
+            <img id="left" class="left" src="http://iphone.images.paojiao.cn/iphone/paper/20117/23/86038959/paojiao_dbc005fa.jpg"/>
+            <img id="right" class="right" src="http://image.tianjimedia.com/uploadImages/2011/245/31E3AW8Q28J1.jpg"/>
+        </div>
+    </div>
+    <input type="button" class="button" value="up" onclick="change(this)"/>
+    <input type="button" class="button" value="down" onclick="change(this)"/>
+    <input type="button" class="button" value="left" onclick="change(this)"/>
+    <input type="button" class="button" value="right" onclick="change(this)"/>
+    <script type="text/javascript">
+        function $(id){
+            return document.getElementById(id);
+        }
+        var btn;
+        var item = $("item");
+        var up_down_deg = 0;
+        var left_right_deg = 0;
+        function change(btn) {
+            switch (btn.value) {
+                case "up":
+                    up_down_deg = up_down_deg + 90;
+                    item.style.webkitTransform = "rotateX("+up_down_deg+"deg)";
+                    break;
+                case "down":
+                    up_down_deg = up_down_deg - 90;
+                    item.style.webkitTransform = "rotateX("+up_down_deg+"deg)";
+                    break;
+                case "left":
+                    left_right_deg = left_right_deg - 90;
+                    item.style.webkitTransform = "rotateY("+left_right_deg+"deg)";
+                    break;
+                case "right":
+                    left_right_deg = left_right_deg + 90;
+                    item.style.webkitTransform = "rotateY("+left_right_deg+"deg)";
+                    break;
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
