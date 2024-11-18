@@ -371,9 +371,9 @@
             (0,
             j.useEffect)((function() {
                 var e, n;
-                (!_.tq || (e = document.body.clientWidth,
+                ((e = document.body.clientWidth,
                 n = document.body.clientHeight,
-                e > 1200 && n > 800 || e > 800 && n > 1200 || (m.Z.confirm({
+                true || (m.Z.confirm({
                     title: "提示",
                     content: "不支持移动端审核！",
                     onOk: function() {
